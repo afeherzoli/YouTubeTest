@@ -68,5 +68,6 @@ public class YouTubeHomeStepDefs {
     @Then("the title of the page should be {string}")
     public void titleOfPageShouldBe(final String title){
         homePage.titleShouldBe(title);
+        homePage.waitForPageReadiness();
     }
 }
