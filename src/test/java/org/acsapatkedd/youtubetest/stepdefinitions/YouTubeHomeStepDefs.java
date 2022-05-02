@@ -63,11 +63,11 @@ public class YouTubeHomeStepDefs {
     @And ("magnifying glass is clicked")
     public void magnifyingGlassIsClicked(){
         homePage.clickMagnifyingGlass();
+        homePage.waitForPageReadiness();
     }
 
     @Then("the title of the page should be {string}")
     public void titleOfPageShouldBe(final String title){
         homePage.titleShouldBe(title);
-        homePage.waitForPageReadiness();
     }
 }
