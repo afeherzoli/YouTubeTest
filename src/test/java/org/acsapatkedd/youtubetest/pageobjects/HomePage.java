@@ -3,12 +3,15 @@ package org.acsapatkedd.youtubetest.pageobjects;
 import org.awaitility.Awaitility;
 import org.hamcrest.Matchers;
 import org.junit.Assert;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.springframework.stereotype.Component;
 
 import org.acsapatkedd.youtubetest.factory.WebDriverFactory;
+
+import java.util.logging.Logger;
 
 @Component
 public class HomePage extends CommonPageObject {
@@ -60,7 +63,7 @@ public class HomePage extends CommonPageObject {
         clickWithJsExecutor(magnifyingGlass);
     }
 
-    public void titleShouldBe(String title) {
-        Assert.assertEquals(title, getWebDriverFromFactory().getTitle());
+    public void titleShouldBe(String url) {
+        Assert.assertEquals(url, getWebDriverFromFactory().getCurrentUrl());
     }
 }
