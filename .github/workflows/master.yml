@@ -34,4 +34,3 @@ jobs:
           path: ./target/test-report.html
       - name: 'BrowserStackLocal Stop'  # Terminating the BrowserStackLocal tunnel connection
         uses: browserstack/github-actions/setup-local@master
-        
